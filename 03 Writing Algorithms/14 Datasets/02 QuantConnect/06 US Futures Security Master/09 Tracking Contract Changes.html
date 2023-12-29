@@ -1,0 +1,20 @@
+<p>As the contracts roll over, the <b>Mapped</b> property of the <b>Future</b> object references the next contract in the series and you receive a <b>SymbolChangedEvent</b>. To get the current <b>Symbol</b> change events, index the <b>SymbolChangedEvents</b> property of the current <a href="/docs/v2/writing-algorithms/key-concepts/time-modeling/timeslices"><b>Slice</b></a> with the continuous Futures <b>Symbol</b>. Slice objects deliver unique events to your algorithm as they happen, but the <b>Slice</b> may not contain data for your Future at every time step. To avoid issues, check if the <b>Slice</b> contains the data you want before you index it.</p>
+
+
+<div class="section-example-container">
+<pre class="python">def OnData(self, slice: Slice) -&gt; None:
+    if slice.SymbolChangedEvents.ContainsKey(self.continuous_future_symbol):
+        symbol_changed_event = slice.SymbolChangedEvents[self.continuous_future_symbol]
+        self.Log(f"Symbol changed: {symbol_changed_event.OldSymbol} -&gt; {symbol_changed_event.NewSymbol}")</pre>
+<pre class="csharp">public override void OnData(Slice slice)
+{
+    if (slice.SymbolChangedEvents.ContainsKey(_continuousFutureSymbol))
+    {
+        var symbolChangedEvent = slice.SymbolChangedEvents[_continuousFutureSymbol];
+        Log($"Symbol changed: {symbolChangedEvent.OldSymbol} -&gt; {symbolChangedEvent.NewSymbol}");
+    }
+}</pre>
+</div>
+
+<p><b>SymbolChangedEvent</b> objects have the following attributes:</p>
+<div data-tree="QuantConnect.Data.Market.SymbolChangedEvent"></div>

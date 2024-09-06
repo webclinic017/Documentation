@@ -1,0 +1,1 @@
+<?php include(DOCS_RESOURCES."/datasets/market-hours/cfd/GBPHKD/regular-trading-hours.html"); ?>

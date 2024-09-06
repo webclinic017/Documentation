@@ -1,0 +1,1 @@
+<?php include(DOCS_RESOURCES."/datasets/market-hours/cfd/CHFCZK/regular-trading-hours.html"); ?>

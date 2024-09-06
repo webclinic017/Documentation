@@ -1,0 +1,1 @@
+<?php include(DOCS_RESOURCES."/datasets/market-hours/cfd/EURSGD/regular-trading-hours.html"); ?>

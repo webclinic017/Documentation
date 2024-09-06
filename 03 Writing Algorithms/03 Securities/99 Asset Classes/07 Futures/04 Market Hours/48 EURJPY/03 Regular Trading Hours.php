@@ -1,0 +1,1 @@
+<?php include(DOCS_RESOURCES."/datasets/market-hours/cfd/EURJPY/regular-trading-hours.html"); ?>

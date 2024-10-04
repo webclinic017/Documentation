@@ -29,6 +29,14 @@
 <table cellspacing="0" cellpadding="0" width="100%">
 <tbody>
 <tr>
+<td width="33%"><a href="#ρ-header">ρ()</a></td>
+<td>Creates a new Rho indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#A-header">A()</a></td>
+<td>Creates a Alpha indicator for the given target symbol in relation with the reference used. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#ABANDS-header">ABANDS()</a></td>
 <td>Creates a new Acceleration Bands indicator.</td>
 </tr>
@@ -47,6 +55,10 @@
 <tr>
 <td width="33%"><a href="#AddChart-header">AddChart()</a></td>
 <td>Add a Chart object to algorithm collection.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#AddCommand-header">AddCommand()</a></td>
+<td>Register a command type to be used.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#AddCrypto-header">AddCrypto()</a></td>
@@ -115,6 +127,10 @@
 <tr>
 <td width="33%"><a href="#AddSeries-header">AddSeries()</a></td>
 <td>Add a series object for charting. This is useful when initializing charts with series other than type = line. If a series exists in the chart with the same name, then it is replaced.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#AddTag-header">AddTag()</a></td>
+<td>Adds a tag to the algorithm.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#AddUniverse-header">AddUniverse()</a></td>
@@ -201,6 +217,10 @@
 <td>Buy Stock (Alias of Order).</td>
 </tr>
 <tr>
+<td width="33%"><a href="#C-header">C()</a></td>
+<td>Creates a Correlation indicator for the given target symbol in relation with the reference used. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#CalculateOrderQuantity-header">CalculateOrderQuantity()</a></td>
 <td>Calculate the order quantity to achieve target-percent holdings.</td>
 </tr>
@@ -211,6 +231,18 @@
 <tr>
 <td width="33%"><a href="#CCI-header">CCI()</a></td>
 <td>Creates a new CommodityChannelIndex indicator. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#CHOP-header">CHOP()</a></td>
+<td>Creates a new ChoppinessIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#CIK-header">CIK()</a></td>
+<td>Converts a CIK identifier into <code>String)</code> array.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#CKS-header">CKS()</a></td>
+<td>Creates a new Chande Kroll Stop indicator which will compute the short and lower stop. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#CMF-header">CMF()</a></td>
@@ -249,6 +281,10 @@
 <td>Converts a CUSIP identifier into a <code>String)</code>.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#D-header">D()</a></td>
+<td>Creates a new Delta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#DCH-header">DCH()</a></td>
 <td>Creates a new Donchian Channel indicator which will compute the Upper Band and Lower Band. The indicator will be automatically updated on the given resolution.</td>
 </tr>
@@ -267,6 +303,10 @@
 <tr>
 <td width="33%"><a href="#DeregisterIndicator-header">DeregisterIndicator()</a></td>
 <td>Will deregister an indicator and it's associated consolidator instance so they stop receiving data updates.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#DO-header">DO()</a></td>
+<td>Creates a new DerivativeOscillator indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Download-header">Download()</a></td>
@@ -297,6 +337,10 @@
 <td>Send an exercise order to the transaction handler.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#FI-header">FI()</a></td>
+<td>Creates a new ForceIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#FilteredIdentity-header">FilteredIdentity()</a></td>
 <td>Creates a new FilteredIdentity indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
@@ -313,6 +357,14 @@
 <td>Called by setup handlers after Initialize and allows the algorithm a chance to organize the data gather in the Initialize method.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#Fundamentals-header">Fundamentals()</a></td>
+<td>Get the fundamental data for the requested symbol at the current time.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#G-header">G()</a></td>
+<td>Creates a new Gamma indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#GetLastKnownPrices-header">GetLastKnownPrices()</a></td>
 <td>Yields data to warmup a security for all it's subscribed data types.</td>
 </tr>
@@ -326,7 +378,7 @@
 </tr>
 <tr>
 <td width="33%"><a href="#History-header">History()</a></td>
-<td>Gets the historical data for the specified symbol. The exact number of bars will be returned. The symbol must exist in the Securities collection.</td>
+<td>Gets the historical data for the specified symbols. The exact number of bars will be returned for each symbol. This may result in some data start earlier/later than others due to when various exchanges are open. The symbols must exist in the Securities collection.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#HMA-header">HMA()</a></td>
@@ -337,12 +389,20 @@
 <td>Creates a new Hilbert Transform indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#IBS-header">IBS()</a></td>
+<td>Creates a new InternalBarStrength indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#ICHIMOKU-header">ICHIMOKU()</a></td>
 <td>Creates a new IchimokuKinkoHyo indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Identity-header">Identity()</a></td>
 <td>Creates a new Identity indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#IndicatorHistory-header">IndicatorHistory()</a></td>
+<td>Gets the historical data of an indicator for the specified symbol. The exact number of bars will be returned. The symbol must exist in the Securities collection.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Initialize-header">Initialize()</a></td>
@@ -355,6 +415,10 @@
 <tr>
 <td width="33%"><a href="#ISIN-header">ISIN()</a></td>
 <td>Converts an ISIN identifier into a <code>String)</code>.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#IV-header">IV()</a></td>
+<td>Creates a new ImpliedVolatility indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#KAMA-header">KAMA()</a></td>
@@ -377,8 +441,12 @@
 <td>Send a limit order to the transaction handler:.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#Link-header">Link()</a></td>
+<td>Get an authenticated link to execute the given command instance.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#Liquidate-header">Liquidate()</a></td>
-<td>Liquidate all holdings and cancel open orders. Called at the end of day for tick-strategies.</td>
+<td>Liquidate your portfolio holdings.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Log-header">Log()</a></td>
@@ -429,6 +497,10 @@
 <td>Creates a new MoneyFlowIndex indicator. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#MGD-header">MGD()</a></td>
+<td>Creates a new McGinley Dynamic indicator.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#MIDPOINT-header">MIDPOINT()</a></td>
 <td>Creates a new MidPoint indicator.</td>
 </tr>
@@ -477,6 +549,14 @@
 <td>Event - v3.0 DATA EVENT HANDLER: (Pattern) Basic template for user to override for receiving all subscription data in a single event.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#OnDelistings-header">OnDelistings()</a></td>
+<td>Event handler to be called when there's been a delistings event.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnDividends-header">OnDividends()</a></td>
+<td>Event handler to be called when there's been a dividend event.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#OnEndOfAlgorithm-header">OnEndOfAlgorithm()</a></td>
 <td>End of algorithm run event handler. This method is called at the end of a backtest or live trading operation. Intended for closing out logs.</td>
 </tr>
@@ -509,8 +589,20 @@
 <td>Order fill event handler. On an order fill update the resulting information is passed to this method.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#OnSplits-header">OnSplits()</a></td>
+<td>Event handler to be called when there's been a split event.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnSymbolChangedEvents-header">OnSymbolChangedEvents()</a></td>
+<td>Event handler to be called when there's been a symbol changed event.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#OnWarmupFinished-header">OnWarmupFinished()</a></td>
 <td>Called when the algorithm has completed initialization and warm up.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OptionChain-header">OptionChain()</a></td>
+<td>Get the option chain for the specified symbol at the current time (<code>Time</code>).</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Order-header">Order()</a></td>
@@ -539,6 +631,10 @@
 <tr>
 <td width="33%"><a href="#Quit-header">Quit()</a></td>
 <td>Terminate the algorithm after processing the current event handler.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#R-header">R()</a></td>
+<td>Creates a new Rho indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#RC-header">RC()</a></td>
@@ -587,6 +683,14 @@
 <tr>
 <td width="33%"><a href="#RSI-header">RSI()</a></td>
 <td>Creates a new RelativeStrengthIndex indicator. This will produce an oscillator that ranges from 0 to 100 based on the ratio of average gains to average losses over the specified period.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#RSV-header">RSV()</a></td>
+<td>Creates a new RogersSatchellVolatility indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#RunCommand-header">RunCommand()</a></td>
+<td>Run a callback command instance.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#RVI-header">RVI()</a></td>
@@ -657,6 +761,10 @@
 <td>Sets holdings for a collection of targets. The implementation will order the provided targets executing first those that reduce a position, freeing margin.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#SetName-header">SetName()</a></td>
+<td>Sets name to the currently running backtest.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#SetObjectStore-header">SetObjectStore()</a></td>
 <td>Sets the object store.</td>
 </tr>
@@ -679,6 +787,10 @@
 <tr>
 <td width="33%"><a href="#SetQuit-header">SetQuit()</a></td>
 <td>Set the Quit flag property of the algorithm.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#SetRiskFreeInterestRateModel-header">SetRiskFreeInterestRateModel()</a></td>
+<td>Sets the risk free interest rate model to be used in the algorithm.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#SetRiskManagement-header">SetRiskManagement()</a></td>
@@ -707,6 +819,10 @@
 <tr>
 <td width="33%"><a href="#SetSummaryStatistic-header">SetSummaryStatistic()</a></td>
 <td>Set a custom summary statistic for the algorithm.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#SetTags-header">SetTags()</a></td>
+<td></td>
 </tr>
 <tr>
 <td width="33%"><a href="#SetTimeZone-header">SetTimeZone()</a></td>
@@ -741,12 +857,20 @@
 <td>Creates an SimpleMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#SOBV-header">SOBV()</a></td>
+<td>Creates a new SmoothedOnBalanceVolume indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#SORTINO-header">SORTINO()</a></td>
 <td>Creates a new Sortino indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#SR-header">SR()</a></td>
-<td>Creates a new RollingSharpeRatio indicator.</td>
+<td>Creates a new SharpeRatio indicator.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#SRSI-header">SRSI()</a></td>
+<td>Creates a new Stochastic RSI indicator which will compute the %K and %D.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#STC-header">STC()</a></td>
@@ -787,6 +911,10 @@
 <tr>
 <td width="33%"><a href="#Symbol-header">Symbol()</a></td>
 <td>Converts the string 'ticker' symbol into a full <code>String)</code> object This requires that the string 'ticker' has been added to the algorithm.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#T-header">T()</a></td>
+<td>Creates a new Theta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#T3-header">T3()</a></td>
@@ -833,6 +961,10 @@
 <td>Creates a new Trix indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#TSF-header">TSF()</a></td>
+<td>Creates a new Time Series Forecast indicator.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#TSI-header">TSI()</a></td>
 <td>Creates a TrueStrengthIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
@@ -845,16 +977,32 @@
 <td>Will unregister an indicator and it's associated consolidator instance so they stop receiving data updates.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#V-header">V()</a></td>
+<td>Creates a new Vega indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#VAR-header">VAR()</a></td>
 <td>Creates a new Variance indicator. This will return the population variance of samples over the specified period.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#VIDYA-header">VIDYA()</a></td>
+<td>Creates a new Chande's Variable Index Dynamic Average indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#VP-header">VP()</a></td>
 <td>Creates an Market Profile indicator for the symbol with Volume Profile (VOL) mode. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#VTX-header">VTX()</a></td>
+<td>Creates a new Vortex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#VWAP-header">VWAP()</a></td>
 <td>Creates an VolumeWeightedAveragePrice (VWAP) indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#VWMA-header">VWMA()</a></td>
+<td>Creates a new VolumeWeightedMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#WarmUpIndicator-header">WarmUpIndicator()</a></td>
@@ -867,6 +1015,22 @@
 <tr>
 <td width="33%"><a href="#WWMA-header">WWMA()</a></td>
 <td>Creates a WilderMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#ZLEMA-header">ZLEMA()</a></td>
+<td>Creates a ZeroLagExponentialMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Γ-header">Γ()</a></td>
+<td>Creates a new Gamma indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Δ-header">Δ()</a></td>
+<td>Creates a new Delta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Θ-header">Θ()</a></td>
+<td>Creates a new Theta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 </tbody></table>
 </div><div id="Adding Data" class="ref-table-container">
@@ -943,6 +1107,10 @@
 <tr>
 <td width="33%"><a href="#GetLastKnownPrices-header">GetLastKnownPrices()</a></td>
 <td>Yields data to warmup a security for all it's subscribed data types.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OptionChain-header">OptionChain()</a></td>
+<td>Get the option chain for the specified symbol at the current time (<code>Time</code>).</td>
 </tr>
 <tr>
 <td width="33%"><a href="#RemoveOptionContract-header">RemoveOptionContract()</a></td>
@@ -1069,6 +1237,10 @@
 <td>Creates a new consolidator for the specified period, generating the requested output type.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#DeregisterIndicator-header">DeregisterIndicator()</a></td>
+<td>Will deregister an indicator and it's associated consolidator instance so they stop receiving data updates.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#RegisterIndicator-header">RegisterIndicator()</a></td>
 <td>Registers the consolidator to receive automatic updates as well as configures the indicator to receive updates from the consolidator.</td>
 </tr>
@@ -1085,12 +1257,20 @@
 <table cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
+<td width="33%"><a href="#CIK-header">CIK()</a></td>
+<td>Converts a CIK identifier into <code>String)</code> array.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#CompositeFIGI-header">CompositeFIGI()</a></td>
 <td>Converts a composite FIGI identifier into a <code>String)</code>.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#CUSIP-header">CUSIP()</a></td>
 <td>Converts a CUSIP identifier into a <code>String)</code>.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Fundamentals-header">Fundamentals()</a></td>
+<td>Get the fundamental data for the requested symbol at the current time.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Initialize-header">Initialize()</a></td>
@@ -1103,6 +1283,14 @@
 <tr>
 <td width="33%"><a href="#OnData-header">OnData()</a></td>
 <td>Event - v3.0 DATA EVENT HANDLER: (Pattern) Basic template for user to override for receiving all subscription data in a single event.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnDelistings-header">OnDelistings()</a></td>
+<td>Event handler to be called when there's been a delistings event.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnDividends-header">OnDividends()</a></td>
+<td>Event handler to be called when there's been a dividend event.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#OnEndOfAlgorithm-header">OnEndOfAlgorithm()</a></td>
@@ -1119,6 +1307,14 @@
 <tr>
 <td width="33%"><a href="#OnFrameworkData-header">OnFrameworkData()</a></td>
 <td>Used to send data updates to algorithm framework models.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnSplits-header">OnSplits()</a></td>
+<td>Event handler to be called when there's been a split event.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#OnSymbolChangedEvents-header">OnSymbolChangedEvents()</a></td>
+<td>Event handler to be called when there's been a symbol changed event.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#OnWarmupFinished-header">OnWarmupFinished()</a></td>
@@ -1174,7 +1370,7 @@
 </tr>
 <tr>
 <td width="33%"><a href="#History-header">History()</a></td>
-<td>Gets the historical data for the specified symbol. The exact number of bars will be returned. The symbol must exist in the Securities collection.</td>
+<td>Gets the historical data for the specified symbols. The exact number of bars will be returned for each symbol. This may result in some data start earlier/later than others due to when various exchanges are open. The symbols must exist in the Securities collection.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#SetWarmUp-header">SetWarmUp()</a></td>
@@ -1188,6 +1384,14 @@
 </div><div id="Indicators" class="ref-table-container">
 <table cellspacing="0" cellpadding="0">
 <tbody>
+<tr>
+<td width="33%"><a href="#ρ-header">ρ()</a></td>
+<td>Creates a new Rho indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#A-header">A()</a></td>
+<td>Creates a Alpha indicator for the given target symbol in relation with the reference used. The indicator will be automatically updated on the given resolution.</td>
+</tr>
 <tr>
 <td width="33%"><a href="#ABANDS-header">ABANDS()</a></td>
 <td>Creates a new Acceleration Bands indicator.</td>
@@ -1265,6 +1469,10 @@
 <td>Creates a new Balance Of Power indicator. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#C-header">C()</a></td>
+<td>Creates a Correlation indicator for the given target symbol in relation with the reference used. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#CC-header">CC()</a></td>
 <td>Initializes a new instance of the CoppockCurve"  indicator.</td>
 </tr>
@@ -1273,12 +1481,24 @@
 <td>Creates a new CommodityChannelIndex indicator. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#CHOP-header">CHOP()</a></td>
+<td>Creates a new ChoppinessIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#CKS-header">CKS()</a></td>
+<td>Creates a new Chande Kroll Stop indicator which will compute the short and lower stop. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#CMF-header">CMF()</a></td>
 <td>Creates a new ChaikinMoneyFlow indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#CMO-header">CMO()</a></td>
 <td>Creates a new ChandeMomentumOscillator indicator.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#D-header">D()</a></td>
+<td>Creates a new Delta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#DCH-header">DCH()</a></td>
@@ -1293,6 +1513,14 @@
 <td>Creates a new DoubleExponentialMovingAverage indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#DeregisterIndicator-header">DeregisterIndicator()</a></td>
+<td>Will deregister an indicator and it's associated consolidator instance so they stop receiving data updates.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#DO-header">DO()</a></td>
+<td>Creates a new DerivativeOscillator indicator.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#DPO-header">DPO()</a></td>
 <td>Creates a new DetrendedPriceOscillator"  indicator.</td>
 </tr>
@@ -1303,6 +1531,10 @@
 <tr>
 <td width="33%"><a href="#EMV-header">EMV()</a></td>
 <td>Creates an EaseOfMovementValue indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#FI-header">FI()</a></td>
+<td>Creates a new ForceIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#FilteredIdentity-header">FilteredIdentity()</a></td>
@@ -1317,6 +1549,10 @@
 <td>Creates an FractalAdaptiveMovingAverage (FRAMA) indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#G-header">G()</a></td>
+<td>Creates a new Gamma indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#HeikinAshi-header">HeikinAshi()</a></td>
 <td>Creates a new Heikin-Ashi indicator.</td>
 </tr>
@@ -1329,12 +1565,20 @@
 <td>Creates a new Hilbert Transform indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#IBS-header">IBS()</a></td>
+<td>Creates a new InternalBarStrength indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#ICHIMOKU-header">ICHIMOKU()</a></td>
 <td>Creates a new IchimokuKinkoHyo indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#Identity-header">Identity()</a></td>
 <td>Creates a new Identity indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#IV-header">IV()</a></td>
+<td>Creates a new ImpliedVolatility indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#KAMA-header">KAMA()</a></td>
@@ -1379,6 +1623,10 @@
 <tr>
 <td width="33%"><a href="#MFI-header">MFI()</a></td>
 <td>Creates a new MoneyFlowIndex indicator. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#MGD-header">MGD()</a></td>
+<td>Creates a new McGinley Dynamic indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#MIDPOINT-header">MIDPOINT()</a></td>
@@ -1437,6 +1685,10 @@
 <td>Creates a new Parabolic SAR indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#R-header">R()</a></td>
+<td>Creates a new Rho indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#RC-header">RC()</a></td>
 <td>Creates a new RegressionChannel indicator which will compute the LinearRegression, UpperChannel and LowerChannel lines, the intercept and slope.</td>
 </tr>
@@ -1473,6 +1725,10 @@
 <td>Creates a new RelativeStrengthIndex indicator. This will produce an oscillator that ranges from 0 to 100 based on the ratio of average gains to average losses over the specified period.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#RSV-header">RSV()</a></td>
+<td>Creates a new RogersSatchellVolatility indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#RVI-header">RVI()</a></td>
 <td>Creates a new RelativeVigorIndex indicator.</td>
 </tr>
@@ -1489,12 +1745,20 @@
 <td>Creates an SimpleMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#SOBV-header">SOBV()</a></td>
+<td>Creates a new SmoothedOnBalanceVolume indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#SORTINO-header">SORTINO()</a></td>
 <td>Creates a new Sortino indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#SR-header">SR()</a></td>
-<td>Creates a new RollingSharpeRatio indicator.</td>
+<td>Creates a new SharpeRatio indicator.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#SRSI-header">SRSI()</a></td>
+<td>Creates a new Stochastic RSI indicator which will compute the %K and %D.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#STC-header">STC()</a></td>
@@ -1519,6 +1783,10 @@
 <tr>
 <td width="33%"><a href="#SWISS-header">SWISS()</a></td>
 <td>Creates Swiss Army Knife transformation for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#T-header">T()</a></td>
+<td>Creates a new Theta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#T3-header">T3()</a></td>
@@ -1553,6 +1821,10 @@
 <td>Creates a new Trix indicator.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#TSF-header">TSF()</a></td>
+<td>Creates a new Time Series Forecast indicator.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#TSI-header">TSI()</a></td>
 <td>Creates a TrueStrengthIndex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
@@ -1565,16 +1837,32 @@
 <td>Will unregister an indicator and it's associated consolidator instance so they stop receiving data updates.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#V-header">V()</a></td>
+<td>Creates a new Vega indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#VAR-header">VAR()</a></td>
 <td>Creates a new Variance indicator. This will return the population variance of samples over the specified period.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#VIDYA-header">VIDYA()</a></td>
+<td>Creates a new Chande's Variable Index Dynamic Average indicator.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#VP-header">VP()</a></td>
 <td>Creates an Market Profile indicator for the symbol with Volume Profile (VOL) mode. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#VTX-header">VTX()</a></td>
+<td>Creates a new Vortex indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#VWAP-header">VWAP()</a></td>
 <td>Creates an VolumeWeightedAveragePrice (VWAP) indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#VWMA-header">VWMA()</a></td>
+<td>Creates a new VolumeWeightedMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#WarmUpIndicator-header">WarmUpIndicator()</a></td>
@@ -1587,6 +1875,22 @@
 <tr>
 <td width="33%"><a href="#WWMA-header">WWMA()</a></td>
 <td>Creates a WilderMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#ZLEMA-header">ZLEMA()</a></td>
+<td>Creates a ZeroLagExponentialMovingAverage indicator for the symbol. The indicator will be automatically updated on the given resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Γ-header">Γ()</a></td>
+<td>Creates a new Gamma indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Δ-header">Δ()</a></td>
+<td>Creates a new Delta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Θ-header">Θ()</a></td>
+<td>Creates a new Theta indicator for the symbol The indicator will be automatically updated on the symbol's subscription resolution.</td>
 </tr>
 </tbody></table>
 </div><div id="Live Trading" class="ref-table-container">
@@ -1661,6 +1965,10 @@
 <td>Sets the brokerage to emulate in backtesting or paper trading. This can be used to set a custom brokerage model.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#SetRiskFreeInterestRateModel-header">SetRiskFreeInterestRateModel()</a></td>
+<td>Sets the risk free interest rate model to be used in the algorithm.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#SetSecurityInitializer-header">SetSecurityInitializer()</a></td>
 <td>Sets the security initializer function, used to initialize/configure securities after creation.</td>
 </tr>
@@ -1689,12 +1997,20 @@
 <table cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
+<td width="33%"><a href="#CIK-header">CIK()</a></td>
+<td>Converts a CIK identifier into <code>String)</code> array.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#CompositeFIGI-header">CompositeFIGI()</a></td>
 <td>Converts a composite FIGI identifier into a <code>String)</code>.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#CUSIP-header">CUSIP()</a></td>
 <td>Converts a CUSIP identifier into a <code>String)</code>.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#Fundamentals-header">Fundamentals()</a></td>
+<td>Get the fundamental data for the requested symbol at the current time.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#IsMarketOpen-header">IsMarketOpen()</a></td>
@@ -1745,6 +2061,18 @@
 <td>Calculate the order quantity to achieve target-percent holdings.</td>
 </tr>
 <tr>
+<td width="33%"><a href="#ComboLegLimitOrder-header">ComboLegLimitOrder()</a></td>
+<td>Issue a combo leg limit order/trade for multiple assets, each having its own limit price.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#ComboLimitOrder-header">ComboLimitOrder()</a></td>
+<td>Issue a combo limit order/trade for multiple assets. A single limit price is defined for the combo order and will fill only if the sum of the assets price compares properly to the limit price, depending on the direction.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#ComboMarketOrder-header">ComboMarketOrder()</a></td>
+<td>Issue a combo market order/trade for multiple assets.</td>
+</tr>
+<tr>
 <td width="33%"><a href="#ExerciseOption-header">ExerciseOption()</a></td>
 <td>Send an exercise order to the transaction handler.</td>
 </tr>
@@ -1762,7 +2090,7 @@
 </tr>
 <tr>
 <td width="33%"><a href="#Liquidate-header">Liquidate()</a></td>
-<td>Liquidate all holdings and cancel open orders. Called at the end of day for tick-strategies.</td>
+<td>Liquidate your portfolio holdings.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#MarketOnCloseOrder-header">MarketOnCloseOrder()</a></td>
@@ -1839,6 +2167,10 @@
 <tr>
 <td width="33%"><a href="#StopMarketOrder-header">StopMarketOrder()</a></td>
 <td>Create a stop market order and return the newly created order id; or negative if the order is invalid.</td>
+</tr>
+<tr>
+<td width="33%"><a href="#SubmitOrderRequest-header">SubmitOrderRequest()</a></td>
+<td>Will submit an order request to the algorithm.</td>
 </tr>
 <tr>
 <td width="33%"><a href="#TrailingStopOrder-header">TrailingStopOrder()</a></td>
